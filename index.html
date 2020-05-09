@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mars Survey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
+    <script src="js/survey.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+<script>
+ 
+  var firebaseConfig = {
+    apiKey: "AIzaSyAwTFlzxLEjkI44xhD8f-IVWClqyRrcB5I",
+    authDomain: "mars-survey-c2034.firebaseapp.com",
+    databaseURL: "https://mars-survey-c2034.firebaseio.com",
+    projectId: "mars-survey-c2034",
+    storageBucket: "mars-survey-c2034.appspot.com",
+    messagingSenderId: "1092309725366",
+    appId: "1:1092309725366:web:bc8ef42cd9b840859db617",
+    measurementId: "G-JEJ2HMTPTF"
+  };
+ 
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+</body>
+</html>
