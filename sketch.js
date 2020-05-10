@@ -11,3 +11,7 @@ function setup(){
     game.getState();
     game.start();
 }
+
+function draw(){
+    
+}
