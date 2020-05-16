@@ -1,11 +1,16 @@
+var canvas;
+
+var gameState = 0;
+var playerCount;
+
 var database;
-var gameState = 0, playerCount, survey, martian, game;
+
+var form, martian, game, allPlayers;
 
 function setup(){
+    canvas = createCanvas(400,400);
+
     database = firebase.database();
-    console.log(database);
-    
-    createCanvas(500,500);
 
     game = new Game();
     game.getState();
@@ -13,5 +18,12 @@ function setup(){
 }
 
 function draw(){
-    
+    if(playerCount === 1){
+        game.updateState(1);
+    }
+
+    if(gameState === 1){
+        clear();
+        game.play();
+    }
 }

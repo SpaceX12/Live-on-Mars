@@ -1,30 +1,38 @@
 class Form{
     constructor(){
-
+        this.title = createElement("h2");
+        this.input = createInput("Name");
+        this.button = createButton("Start!!");
+        this.question1 = createElement("h3");
     }
+    hide(){
+        this.input.hide();
+        this.button.hide();
+        this.title.hide();  
+    }
+
     display(){
-        var title = createElement("h2")
-        title.html("Ticket to Mars");
-        title.position(130,0);
+        
+        this.title.html("Ticket to Mars");
+        this.title.position(130,0);
+        
+        this.input.position(130,160);
+        
+        this.button.position(250,200);
 
-        var input = createInput("Name")
-        input.position(130,160);
+        this.button.mousePressed(()=>{
+            this.input.hide();
+            this.button.hide();
 
-        var button = createButton("Start!!")
-        button.position(250,200);
+            var name = this.input.value();
 
-        button.mousePressed(function(){
-            input.hide();
-            button.hide();
-
-            var name = input.value();
             playerCount++
             martian.update(name);
             martian.updateCount(playerCount)
 
-            var question1 = createElement("h3")
-            question1.html("Do you want to live on Mars ? ")
-            question1.position(130,160);
+            
+            this.question1.html("Do you want to live on Mars ? ")
+            this.question1.position(130,160);
         })
     }
 }
